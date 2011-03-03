@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+<h1>Modules</h1>
+<ul>
+
+	<li>
+		<a href="../modules/CollectibleItemsHandlers.html">CollectibleItemsHandlers</a>
+	</li>
+
+	<li>
+		<a href="../modules/NamedEventHandlers.html">NamedEventHandlers</a>
+	</li>
+
+	<li>
+		<a href="../modules/NamedObjects.html">NamedObjects</a>
+	</li>
+
+	<li>
+		<a href="../modules/buttons-ts-64.html">buttons-ts-64</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime.html">lime</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime-interface.html">lime-interface</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime-utils.html">lime-utils</a>
+	</li>
+
+	<li>
+		<a href="../modules/ui.html">ui</a>
+	</li>
+
+</ul>
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../files/CollectibleItemsHandlers.html">CollectibleItemsHandlers.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Json.html">Json.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/NamedEventHandlers.html">NamedEventHandlers.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/NamedObjects.html">NamedObjects.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/buttons-ts-64.html">buttons-ts-64.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/cadkjson.html">cadkjson.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/config.html">config.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-atlas.html">lime-atlas.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-interface.html">lime-interface.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-map.html">lime-map.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-object.html">lime-object.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-objectLayer.html">lime-objectLayer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-property.html">lime-property.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tile.html">lime-tile.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tileLayer.html">lime-tileLayer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tileSet.html">lime-tileSet.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-utils.html">lime-utils.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime.html">lime.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/main.html">main.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/ui.html">ui.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/xml_parser.html">xml_parser.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div><!-- id="navigation" -->
+
+<div id="content">
+
+<h1>Module <code>...</code></h1>
+
+<p>This NamedEventHandlers facility -- [[</p>
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedEventHandlers.eventHandlerFactory">NamedEventHandlers.eventHandlerFactory</a>&nbsp;(eventTarget, eventName, anObject, aSelfEventHandler)</td>
+	<td class="summary">Returns a runtimeEventHandler(event) that calls the given aSelfEventHandler(anObject,event) thru a closure over the given anObject.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedEventHandlers.tableRuntimeLocalEventDispatcher">NamedEventHandlers.tableRuntimeLocalEventDispatcher</a>&nbsp;(self, event)</td>
+	<td class="summary">generic system table-event to local object event dispatcher assigns the object-self to the event.target and then redispatches to the object itself.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedEventHandlers.timerHandlerFactory">NamedEventHandlers.timerHandlerFactory</a>&nbsp;(anObject, aSelfEventHandler)</td>
+	<td class="summary">Returns a timerEventHandler(event) that calls the given aSelfEventHandler(anObject,event) thru a closure over the given anObject.</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="NamedEventHandlers.eventHandlerFactory"></a><strong>NamedEventHandlers.eventHandlerFactory</strong>&nbsp;(eventTarget, eventName, anObject, aSelfEventHandler)</dt>
+<dd>
+Returns a runtimeEventHandler(event) that calls the given aSelfEventHandler(anObject,event) thru a closure over the given anObject. Furthermore, if anObject is a display object, it will registerDisplayObject(anObject), and adds auto-cancellation by checking if the anObject isDisplayObjectOrphan(anObject). Lastly, if a string is passed for anObject and/or aSelfEventHandler, the associated object or handler are looked up with getObject(). Auto timer-cancellation will be added to the returned handler if the anObject is either a display object or has a name-object entry. in those cases, the handler will auto-cancel when isDisplayObjectOrphan(anObject) or has no more name-object entry.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  eventTarget: object - Runtime, System
+	</li>
+	
+	<li>
+	  eventName: string - "enterFrame", "collision", "orientation", etc.
+	</li>
+	
+	<li>
+	  anObject: object or name resolving to object - possible display object
+	</li>
+	
+	<li>
+	  aSelfEventHandler: function or name resolving to function - self-event handler signature of (anObject,event)
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+timer event handler function with signature (event) for use with Runtime:addEventListener("enterFrame", runtimeEventHandler)
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedEventHandlers.tableRuntimeLocalEventDispatcher"></a><strong>NamedEventHandlers.tableRuntimeLocalEventDispatcher</strong>&nbsp;(self, event)</dt>
+<dd>
+generic system table-event to local object event dispatcher assigns the object-self to the event.target and then redispatches to the object itself. In that way, we can have mutiple system event handlers that are tied to an object as the table-mechanism only allows us to register a single system event handler with an object. Usage for "enterFrame" events with a display object "ob": ob[enterFrame] = NamedEventHandlers.tableRuntimeLocalEventDispatcher Register object-table event handler with Runtime like: Runtime:addEventListener( "enterFrame", ob ) will then forward "enterFrame" event to object's event handlers like "myEnterFrameHandler(event)" that have been registered like: ob:addEventListener( "enterFrame", myEnterFrameHandler )
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  self: 
+	</li>
+	
+	<li>
+	  event: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedEventHandlers.timerHandlerFactory"></a><strong>NamedEventHandlers.timerHandlerFactory</strong>&nbsp;(anObject, aSelfEventHandler)</dt>
+<dd>
+Returns a timerEventHandler(event) that calls the given aSelfEventHandler(anObject,event) thru a closure over the given anObject. Furthermore, if anObject is a display object, it will registerDisplayObject(anObject), and adds auto-cancellation by checking if the anObject isDisplayObjectOrphan(anObject). Lastly, if a string is passed for anObject and/or aSelfEventHandler, the associated object or handler are looked up with getObject(). Auto timer-cancellation will be added to the returned handler if the anObject is either a display object or has a name-object entry. in those cases, the handler will auto-cancel when isDisplayObjectOrphan(anObject) or has no more name-object entry.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  anObject: object or name resolving to object - possible display object
+	</li>
+	
+	<li>
+	  aSelfEventHandler: function or name resolving to function - self-event handler signature of (anObject,event)
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+timer event handler function with signature (event) for use with timer.performWithDelay()
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>

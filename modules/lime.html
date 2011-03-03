@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+<h1>Modules</h1>
+<ul>
+
+	<li>
+		<a href="../modules/CollectibleItemsHandlers.html">CollectibleItemsHandlers</a>
+	</li>
+
+	<li>
+		<a href="../modules/NamedEventHandlers.html">NamedEventHandlers</a>
+	</li>
+
+	<li>
+		<a href="../modules/NamedObjects.html">NamedObjects</a>
+	</li>
+
+	<li>
+		<a href="../modules/buttons-ts-64.html">buttons-ts-64</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime.html">lime</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime-interface.html">lime-interface</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime-utils.html">lime-utils</a>
+	</li>
+
+	<li>
+		<a href="../modules/ui.html">ui</a>
+	</li>
+
+</ul>
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../files/CollectibleItemsHandlers.html">CollectibleItemsHandlers.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Json.html">Json.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/NamedEventHandlers.html">NamedEventHandlers.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/NamedObjects.html">NamedObjects.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/buttons-ts-64.html">buttons-ts-64.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/cadkjson.html">cadkjson.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/config.html">config.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-atlas.html">lime-atlas.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-interface.html">lime-interface.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-map.html">lime-map.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-object.html">lime-object.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-objectLayer.html">lime-objectLayer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-property.html">lime-property.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tile.html">lime-tile.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tileLayer.html">lime-tileLayer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tileSet.html">lime-tileSet.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-utils.html">lime-utils.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime.html">lime.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/main.html">main.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/ui.html">ui.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/xml_parser.html">xml_parser.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div><!-- id="navigation" -->
+
+<div id="content">
+
+<h1>Module <code>...</code></h1>
+
+<p>POLITE NOTICE / PSA										----  ---- I have put a lot of work into this library and plan to support it for a very, very		---- long time so please don't give the code to anyone else. I doubt that anyone would as	---- we are all developers in the same boat but I just thougt I would put this here in 		---- case any one wondered if it was ok to share.											---- ---- If you did get this code through less than legitimate means then please consider		---- buying it legally, it is (I think) affordably priced and you will get free updates		---- and support	for life.																	---- ---- I hope you enjoy using it as much as I have enjoyed writing it and I also hope that		---- you will support me and the development of Lime by telling your friends about it etc	---- although naturally I don't require any link backs of any kind, it is completely up		---- to you.																					---- ---- If you have any additions or fixes that you would like included in the main releases	----</p>
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#buildPhysical">buildPhysical</a>&nbsp;(map)</td>
+	<td class="summary">Build a physical representation of a map.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createAtlas">createAtlas</a>&nbsp;()</td>
+	<td class="summary">Create an Atlas.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createObjectLayer">createObjectLayer</a>&nbsp;(map, layerName)</td>
+	<td class="summary">Creates the visual debug representation of a single object layer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createTileLayer">createTileLayer</a>&nbsp;(map, layerName)</td>
+	<td class="summary">Creates the visual representation of a single layer.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#createVisual">createVisual</a>&nbsp;(map)</td>
+	<td class="summary">Creates the visual representation of a map.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#disableDebugMode">disableDebugMode</a>&nbsp;()</td>
+	<td class="summary">Disables debug mode so messages aren't printed to the console.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#disableScreenCulling">disableScreenCulling</a>&nbsp;()</td>
+	<td class="summary">Disable screen space culling.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#enableDebugMode">enableDebugMode</a>&nbsp;()</td>
+	<td class="summary">Enables debug mode so messages are printed to the console when things happen.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#enableScreenCulling">enableScreenCulling</a>&nbsp;()</td>
+	<td class="summary">Enable screen space culling </td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#isDebugModeEnabled">isDebugModeEnabled</a>&nbsp;()</td>
+	<td class="summary">Checks if debug mode is currently enabled or disabled.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#isScreenCullingEnabled">isScreenCullingEnabled</a>&nbsp;()</td>
+	<td class="summary">Check if screen culling is enabled.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#loadCustomMap">loadCustomMap</a>&nbsp;(fileName, baseDirectory, params)</td>
+	<td class="summary">Loads a custom map.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#loadMap">loadMap</a>&nbsp;(fileName, baseDirectory)</td>
+	<td class="summary">Loads a map.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#registerInterface">registerInterface</a>&nbsp;(map)</td>
+	<td class="summary">Register a map so that an interface will be created from it.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#verifyVersion">verifyVersion</a>&nbsp;()</td>
+	<td class="summary">Checks to see if you are running the current version of Lime.</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="buildPhysical"></a><strong>buildPhysical</strong>&nbsp;(map)</dt>
+<dd>
+Build a physical representation of a map.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  map: - The map to build.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createAtlas"></a><strong>createAtlas</strong>&nbsp;()</dt>
+<dd>
+Create an Atlas.
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+The created atlas.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createObjectLayer"></a><strong>createObjectLayer</strong>&nbsp;(map, layerName)</dt>
+<dd>
+Creates the visual debug representation of a single object layer.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  map: The map that contains the object layer.
+	</li>
+	
+	<li>
+	  layerName: The name of the object layer.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+The created object layer.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createTileLayer"></a><strong>createTileLayer</strong>&nbsp;(map, layerName)</dt>
+<dd>
+Creates the visual representation of a single layer.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  map: The map that contains the layer.
+	</li>
+	
+	<li>
+	  layerName: The name of the layer.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+The created layer.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="createVisual"></a><strong>createVisual</strong>&nbsp;(map)</dt>
+<dd>
+Creates the visual representation of a map.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  map: The map to create.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+The display group for the map world.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="disableDebugMode"></a><strong>disableDebugMode</strong>&nbsp;()</dt>
+<dd>
+Disables debug mode so messages aren't printed to the console. Errors will still be printed.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="disableScreenCulling"></a><strong>disableScreenCulling</strong>&nbsp;()</dt>
+<dd>
+Disable screen space culling.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="enableDebugMode"></a><strong>enableDebugMode</strong>&nbsp;()</dt>
+<dd>
+Enables debug mode so messages are printed to the console when things happen.
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="enableScreenCulling"></a><strong>enableScreenCulling</strong>&nbsp;()</dt>
+<dd>
+Enable screen space culling
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="isDebugModeEnabled"></a><strong>isDebugModeEnabled</strong>&nbsp;()</dt>
+<dd>
+Checks if debug mode is currently enabled or disabled.
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+True if enabled, false if not.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="isScreenCullingEnabled"></a><strong>isScreenCullingEnabled</strong>&nbsp;()</dt>
+<dd>
+Check if screen culling is enabled. If screen space culling as been enabled this function will return true. If it is disabled then it returns false.
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+True if enabled, false if not.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="loadCustomMap"></a><strong>loadCustomMap</strong>&nbsp;(fileName, baseDirectory, params)</dt>
+<dd>
+Loads a custom map.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  fileName: The filename of the map.
+	</li>
+	
+	<li>
+	  baseDirectory: Path to load the map data from filename. Default is system.ResourceDirectory.
+	</li>
+	
+	<li>
+	  params: Custom map parameters.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+The loaded Map object.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="loadMap"></a><strong>loadMap</strong>&nbsp;(fileName, baseDirectory)</dt>
+<dd>
+Loads a map.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  fileName: The filename of the map.
+	</li>
+	
+	<li>
+	  baseDirectory: Path to load the map data from filename. Default is system.ResourceDirectory.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+The loaded Map object.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="registerInterface"></a><strong>registerInterface</strong>&nbsp;(map)</dt>
+<dd>
+Register a map so that an interface will be created from it.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  map: - The map object.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="verifyVersion"></a><strong>verifyVersion</strong>&nbsp;()</dt>
+<dd>
+Checks to see if you are running the current version of Lime. Will display the results in the console.
+
+
+
+
+
+
+
+<h3>Return value:</h3>
+True if OK. False if there is a version mismatch.
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../luadoc.css" type="text/css" />
+	<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+</head>
+
+<body>
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+
+<h1>LuaDoc</h1>
+<ul>
+	
+	<li><a href="../index.html">Index</a></li>
+	
+</ul>
+
+
+<!-- Module list -->
+
+<h1>Modules</h1>
+<ul>
+
+	<li>
+		<a href="../modules/CollectibleItemsHandlers.html">CollectibleItemsHandlers</a>
+	</li>
+
+	<li>
+		<a href="../modules/NamedEventHandlers.html">NamedEventHandlers</a>
+	</li>
+
+	<li>
+		<a href="../modules/NamedObjects.html">NamedObjects</a>
+	</li>
+
+	<li>
+		<a href="../modules/buttons-ts-64.html">buttons-ts-64</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime.html">lime</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime-interface.html">lime-interface</a>
+	</li>
+
+	<li>
+		<a href="../modules/lime-utils.html">lime-utils</a>
+	</li>
+
+	<li>
+		<a href="../modules/ui.html">ui</a>
+	</li>
+
+</ul>
+
+
+
+<!-- File list -->
+
+<h1>Files</h1>
+<ul>
+
+	<li>
+		<a href="../files/CollectibleItemsHandlers.html">CollectibleItemsHandlers.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/Json.html">Json.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/NamedEventHandlers.html">NamedEventHandlers.lua</a>
+	</li>
+
+	<li><strong>NamedObjects.lua</strong></li>
+	
+	<li>
+		<a href="../files/buttons-ts-64.html">buttons-ts-64.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/cadkjson.html">cadkjson.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/config.html">config.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-atlas.html">lime-atlas.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-interface.html">lime-interface.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-map.html">lime-map.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-object.html">lime-object.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-objectLayer.html">lime-objectLayer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-property.html">lime-property.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tile.html">lime-tile.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tileLayer.html">lime-tileLayer.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-tileSet.html">lime-tileSet.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime-utils.html">lime-utils.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/lime.html">lime.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/main.html">main.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/ui.html">ui.lua</a>
+	</li>
+
+	<li>
+		<a href="../files/xml_parser.html">xml_parser.lua</a>
+	</li>
+
+</ul>
+
+
+
+
+
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h1>File <code>NamedObjects.lua</code></h1>
+
+
+<p>Garbage-collection friendly name-object and object-name mapping facility.  [[</p>
+
+
+
+
+
+
+<h2>Functions</h2>
+<table class="function_list">
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.getName">NamedObjects.getName</a>&nbsp;(anObject)</td>
+	<td class="summary">Returns the registered name for anObject - note that the name-object mapping is 1-1 and unique within the app's context.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.getObject">NamedObjects.getObject</a>&nbsp;(aName)</td>
+	<td class="summary">Returns the registered object for aName - note that the name-object mapping is 1-1 and unique within the app's context.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.isDisplayObject">NamedObjects.isDisplayObject</a>&nbsp;(aDisplayObject, autoDORegister)</td>
+	<td class="summary">Returns whether aDisplayObject is a Corona display object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.isDisplayObjectOrphan">NamedObjects.isDisplayObjectOrphan</a>&nbsp;(anObject)</td>
+	<td class="summary">Returns whether anObject is an orphaned display object, i.e.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.isRegisteredDisplayObject">NamedObjects.isRegisteredDisplayObject</a>&nbsp;(aDisplayObject)</td>
+	<td class="summary">Returns whether aDisplayObject is registered as a display object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.registerDisplayObject">NamedObjects.registerDisplayObject</a>&nbsp;(aDisplayObject)</td>
+	<td class="summary">If the object aDisplayObject is a display object, then it is registered in a weak table as a display object.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.registerNameObject">NamedObjects.registerNameObject</a>&nbsp;(aName, anObject, aContext)</td>
+	<td class="summary">Register the mapping of anObject and aName within aContext.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.removeNameObject">NamedObjects.removeNameObject</a>&nbsp;(aNameOrObject)</td>
+	<td class="summary">Removes map-entry for given aNameOrObject from name-object registration system.</td>
+	</tr>
+
+	<tr>
+	<td class="name" nowrap><a href="#NamedObjects.removeNameObjectContext">NamedObjects.removeNameObjectContext</a>&nbsp;(aContext)</td>
+	<td class="summary">Removes all name-objects mappings associated with aContext and returns an array-table with references to all removed objects.</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+<h2><a name="functions"></a>Functions</h2>
+<dl class="function">
+
+
+
+<dt><a name="NamedObjects.getName"></a><strong>NamedObjects.getName</strong>&nbsp;(anObject)</dt>
+<dd>
+Returns the registered name for anObject - note that the name-object mapping is 1-1 and unique within the app's context. If object is an orphaned display object (DO), returns nil plus the orphaned object's name
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  anObject: object
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+string (name) or nil if not found - nil,string for orphaned DO
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.getObject"></a><strong>NamedObjects.getObject</strong>&nbsp;(aName)</dt>
+<dd>
+Returns the registered object for aName - note that the name-object mapping is 1-1 and unique within the app's context. If object is an orphaned display object (DO), returns nil plus the orphaned object
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aName: string - name for object
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+object or nil if not found - nil,object for orphaned DO
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.isDisplayObject"></a><strong>NamedObjects.isDisplayObject</strong>&nbsp;(aDisplayObject, autoDORegister)</dt>
+<dd>
+Returns whether aDisplayObject is a Corona display object. note that all Corona types seem to share the same metatable, which is used for the test.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aDisplayObject: table - possible display object.
+	</li>
+	
+	<li>
+	  autoDORegister: boolean - default is true.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+boolean - true if object is a display object
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.isDisplayObjectOrphan"></a><strong>NamedObjects.isDisplayObjectOrphan</strong>&nbsp;(anObject)</dt>
+<dd>
+Returns whether anObject is an orphaned display object, i.e. a former display object that has been removeSelf'ed. The latter has removed the display object's functionality but leaves a table orphan. Detection can be used to avoid further usage and to remove for example event handlers registered for that object. Correct detection depends on previous registration thru implicit or explicit registerDisplayObject().
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  anObject: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+boolean - true means anObject is an orphaned DO, while false means dunno...(as a DO may not have been registered)
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.isRegisteredDisplayObject"></a><strong>NamedObjects.isRegisteredDisplayObject</strong>&nbsp;(aDisplayObject)</dt>
+<dd>
+Returns whether aDisplayObject is registered as a display object.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aDisplayObject: 
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.registerDisplayObject"></a><strong>NamedObjects.registerDisplayObject</strong>&nbsp;(aDisplayObject)</dt>
+<dd>
+If the object aDisplayObject is a display object, then it is registered in a weak table as a display object.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aDisplayObject: object that is registered as a display object if it is one.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+boolean - true if aDisplayObject is registered - false otherwise.
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.registerNameObject"></a><strong>NamedObjects.registerNameObject</strong>&nbsp;(aName, anObject, aContext)</dt>
+<dd>
+Register the mapping of anObject and aName within aContext. The name-object association is a 1-1 unique mapping within the application. The names are unique and will only point at one object at the time while the objects will only map to a single name at the time. Reregistering a name with an other object will result in a removal of any existing name-object mapping entry. The context refers to the object that the mapping is anchored to for its life-time and existence. As long as the context exists and is not garbage collected, the mapping entry will exist. A context object can be garbage collected if the application doesn't hold any more references to it. One can also explicitly remove a single name-object mapping with removeNameObjectContext(aNameOrAnObject), or all name-object mappings associated with a context thru removeNameObjectContext(aContext). There are two predefined contexts to facility common use cases that are refered to thru the follwoing names: "WeakContext" and "PermanentContext". If the context to a name-object mapping is "WeakContext", then this mapping will be removed if the object itself gets garbage collected or explictly removed. If the context to name-object mapping is "PermanentContext", then the name-object facility will hold real references to the object such that it will remain to exist for the duration of the program even if the application itself doesn't hold anymore references to it.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aName: string unique identifier for anObject within the application
+	</li>
+	
+	<li>
+	  anObject: object/table/function to be mapped to aName
+	</li>
+	
+	<li>
+	  aContext: object/table/function or resolvable name - name-object association is linked to existence of this context - if this object is garbage collected or removed then the name-object association is removed also.
+	</li>
+	
+</ul>
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.removeNameObject"></a><strong>NamedObjects.removeNameObject</strong>&nbsp;(aNameOrObject)</dt>
+<dd>
+Removes map-entry for given aNameOrObject from name-object registration system. Application logic should not rely on any garbage collection for the removal of name-object mappings, but should instead remove mapping entries explictly thru removeNameObject() or removeNameObjectContext(). Note that no (display-)objects are actually removed or deleted, only their name-object mapping entry is removed. Although removing the mapping entry may remove the last explicit reference which may result in a garbage collection of the object.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aNameOrObject: - if string removes name-object entry associated with that name - if object removes entry associated with that object (note that WeakContext or PermanentContext entries cannot be removed)
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+name or object - the other part of any found association
+
+
+
+</dd>
+
+
+
+
+<dt><a name="NamedObjects.removeNameObjectContext"></a><strong>NamedObjects.removeNameObjectContext</strong>&nbsp;(aContext)</dt>
+<dd>
+Removes all name-objects mappings associated with aContext and returns an array-table with references to all removed objects. The latter can optionally be used for clean-up purposes. Application logic should not rely on any garbage collection for the removal of name-object mappings, but should instead remove mapping entries explictly thru removeNameObject() or removeNameObjectContext(). Note that no (display-)objects are actually removed or deleted, only their name-object mapping entry is removed. Although removing the mapping entry may remove the last explicit reference which may result in a garbage collection of the object.
+
+
+<h3>Parameters</h3>
+<ul>
+	
+	<li>
+	  aContext: object or name - (note that WeakContext or PermanentContext cannot be removed)
+	</li>
+	
+</ul>
+
+
+
+
+
+
+<h3>Return value:</h3>
+array-table with all objects that were part of the removed mappings (for possible cleanup purposes)
+
+
+
+</dd>
+
+
+</dl>
+
+
+
+
+
+
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->	
+</body>
+</html>
